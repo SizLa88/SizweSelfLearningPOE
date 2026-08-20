@@ -25,3 +25,8 @@ It demonstrates a full **UI + API test automation framework** built using indust
 | Extent / Allure | Reporting |
 
 ---
+
+## ⚠️ Disclaimer
+This is a personal project created for learning and portfolio purposes only.
+No company resources, code, or data are used in this repository.
+

@@ -10,6 +10,12 @@
     <groupId>com.sizwe</groupId>
     <artifactId>SizweSelfLearningPOE</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>UIBank</module>
+        <module>SauceDemo</module>
+        <module>DemoBlaze</module>
+    </modules>
 
     <!-- ✅ Java setup -->
     <properties>
@@ -111,5 +117,7 @@
 
         </plugins>
     </build>
+
+
 
 </project>
