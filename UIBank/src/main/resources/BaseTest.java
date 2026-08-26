@@ -9,13 +9,15 @@ public class BaseTest {
     protected WebDriver driver;
 
     @BeforeMethod
-    public void setup() {
+    public void setUp() {
 
-        driver = DriverFactory.initializeDriver("edge");
+        driver = DriverFactory.initializeDriver();
+
+        driver.get("https://uibank.uipath.com/welcome");
     }
 
     @AfterMethod
-    public void teardown() {
+    public void tearDown() {
 
         DriverFactory.quitDriver();
     }

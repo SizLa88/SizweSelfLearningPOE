@@ -1,28 +1,36 @@
 package Base;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverFactory {
 
     private static WebDriver driver;
 
-    public static WebDriver initializeDriver() {
+    public static WebDriver initializeDriver(String browser) {
 
-        if (driver == null) {
+        if (browser.equalsIgnoreCase("chrome")) {
 
-            EdgeOptions options = new EdgeOptions();
+            driver = new ChromeDriver();
 
-            driver = new EdgeDriver(options);
+        } else if (browser.equalsIgnoreCase("edge")) {
 
-            driver.manage().window().maximize();
+            driver = new EdgeDriver();
+
+        } else {
+
+            driver = new FirefoxDriver();
         }
+
+        driver.manage().window().maximize();
 
         return driver;
     }
 
     public static WebDriver getDriver() {
+
         return driver;
     }
 

@@ -1,52 +1,103 @@
 package Tests;
 
-import Base.BaseTest;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import java.lang.Thread;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import java.time.Duration;
-import java.time.Instant;
 
-public class RegisterAccountTest extends BaseTest {
+import java.time.Duration;
+
+public class RegisterAccountTest {
+
+    public static WebDriver driver;
 
     @Test
-    public void registerAccount() {
+    public void registerAccount() throws InterruptedException {
 
-        System.out.println("Test Started");
+        driver = new EdgeDriver();
 
-        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.manage().window().maximize();
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.id("get-started"))).click();
+        driver.get("https://uibank.uipath.com/welcome");
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.id("email"))).sendKeys("siz.ngwenya@gmail.com");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.id("password"))).sendKeys("LetMeIn88#");
+        // Click Register Button
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.id("firstName"))).sendKeys("Sizwe");
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/body/div/app-welcome-page/div[1]/div/div[2]/div/button"))).click();
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.id("lastName"))).sendKeys("Ngwenya");
+        Thread.sleep(2000);
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.id("middleName"))).sendKeys("Mpumelelo");
+        // Personal Information
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='sex']/option[2]"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys("siz.ngwenya@gmail.com");
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='title']/option[4]"))).click();
+        Thread.sleep(2000);
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='employmentStatus']/option[2]"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys("Test@123");
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.id("age"))).sendKeys("07/25/88");
+        Thread.sleep(2000);
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='maritalStatus']/option[2]"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName"))).sendKeys("Sizwe");
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.id("numberOfDependents"))).sendKeys("0");
+        Thread.sleep(2000);
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.id("username"))).sendKeys("SizweNG");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lastName"))).sendKeys("Ngwenya");
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.id("agreeCheckbox"))).click();
+        Thread.sleep(2000);
 
-        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Register')]"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("middleName"))).sendKeys("M");
 
-        System.out.println("Account registration completed successfully at: " + Instant.now());
+        Thread.sleep(2000);
+
+        // Dropdowns
+
+        new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("sex")))).selectByVisibleText("Male");
+
+        Thread.sleep(2000);
+
+        new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("title")))).selectByVisibleText("Mr");
+
+        Thread.sleep(2000);
+
+        new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("employmentStatus")))).selectByVisibleText("Full-time");
+
+        Thread.sleep(2000);
+
+        new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("maritalStatus")))).selectByVisibleText("Single");
+
+        Thread.sleep(2000);
+
+        // Date of Birth (MM/DD/YY)
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("age"))).sendKeys("07/07/07");
+
+        Thread.sleep(2000);
+
+        // Other Fields
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("numberOfDependents"))).sendKeys("1");
+
+        Thread.sleep(2000);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username"))).sendKeys("SizBankTest");
+
+        Thread.sleep(2000);
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("agreeCheckbox"))).click();
+
+        Thread.sleep(2000);
+
+        // Register
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/body/div/app-register-landing/app-register/div/div/div[2]/form/div[4]/button"))).click();
+
+        System.out.println("Registration Script Executed Successfully");
+
+        driver.quit();
     }
 }
