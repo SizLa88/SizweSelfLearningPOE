@@ -1,0 +1,32 @@
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Maven
+target/
+
+# Reports
+Reports/
+allure-results/
+allure-report/
+
+# Screenshots
+Screenshots/
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Selenium temp files
+*.tmp
+
+# Generated test outputs
+test-output/
+
+# Java
+*.class

@@ -16,6 +16,7 @@
         <module>UIBank</module>
         <module>SauceDemo</module>
         <module>DemoBlaze</module>
+        <module>APIAutomation</module>
     </modules>
 
     <properties>
