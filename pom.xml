@@ -17,6 +17,8 @@
         <module>SauceDemo</module>
         <module>DemoBlaze</module>
         <module>APIAutomation</module>
+        <module>PARABank</module>
+        <module>OrangeHRM</module>
     </modules>
 
     <properties>
