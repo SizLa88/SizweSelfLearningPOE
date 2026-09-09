@@ -5,32 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698c585d-0cbc-4469-abcf-22dd3dadc992" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Base/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Base/DriverFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/ExtentReports/ExtentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/ExtentReports/ExtentTestManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/ExtentReports/TestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/AddNewEmployeePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/CreateAdminUserPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/DeleteAdminUserPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/DeleteEmployeePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/LoginInvalidPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/LoginValidPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/AddNewEmployeeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/CreateAdminUserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/DeleteAdminUserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/DeleteEmployeeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/LoginInvalidTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/LoginValidTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Utils/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Utils/ScreenshotHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Utils/TestDataStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIBank/src/test/java/Pages/TransferFundsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIBank/src/test/java/Tests/TransferFundsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Tests/OpenCheckingAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Tests/OpenCheckingAccountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Tests/OpenSavingsAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Tests/OpenSavingsAccountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Utils/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Utils/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Pages/OpenCheckingAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Pages/OpenCheckingAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Pages/OpenSavingsAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Pages/OpenSavingsAccountPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
