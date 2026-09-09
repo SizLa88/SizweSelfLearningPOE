@@ -5,7 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698c585d-0cbc-4469-abcf-22dd3dadc992" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Base/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Base/DriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/ExtentReports/ExtentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/ExtentReports/ExtentTestManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/ExtentReports/TestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/AddNewEmployeePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/CreateAdminUserPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/DeleteAdminUserPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/DeleteEmployeePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/LoginInvalidPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Pages/LoginValidPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/AddNewEmployeeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/CreateAdminUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/DeleteAdminUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/DeleteEmployeeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/LoginInvalidTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Tests/LoginValidTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Utils/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Utils/ScreenshotHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OrangeHRM/src/test/java/Utils/TestDataStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIBank/src/test/java/Pages/TransferFundsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIBank/src/test/java/Tests/TransferFundsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Tests/OpenCheckingAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Tests/OpenCheckingAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Tests/OpenSavingsAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Tests/OpenSavingsAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Utils/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Utils/Config.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +104,11 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "TestNG.LoginTest.executor": "Run",
     "TestNG.LoginTest.login.executor": "Run",
+    "TestNG.OpenCheckingAccountTest.executor": "Run",
     "TestNG.OpenDebitCardTest.openDebitCard.executor": "Run",
+    "TestNG.OpenSavingsAccountTest.executor": "Run",
     "TestNG.OpenSavingsAccountTest.testOpenSavingsAccount.executor": "Run",
     "TestNG.RegisterAccountTest.registerAccount.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -99,20 +127,7 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.RegisterAccountTest.registerAccount">
-    <configuration name="RegisterAccountTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Tests.RegisterAccountTest" />
-      <module name="UIBank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.OpenCheckingAccountTest">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="untitled" />
       <method v="2">
@@ -124,7 +139,7 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest.login" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="UIBank" />
       <extension name="coverage">
         <pattern>
@@ -134,15 +149,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.LoginTest" />
-      <option name="METHOD_NAME" value="login" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OpenDebitCardTest.openDebitCard" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="OpenCheckingAccountTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="UIBank" />
       <extension name="coverage">
         <pattern>
@@ -151,9 +165,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.OpenDebitCardTest" />
-      <option name="METHOD_NAME" value="openDebitCard" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="Tests.OpenCheckingAccountTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpenSavingsAccountTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="UIBank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.OpenSavingsAccountTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -198,11 +228,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RegisterAccountTest.registerAccount" />
-        <item itemvalue="TestNG.LoginTest.login" />
+        <item itemvalue="TestNG.OpenCheckingAccountTest" />
+        <item itemvalue="TestNG.OpenSavingsAccountTest" />
+        <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.OpenSavingsAccountTest.testOpenSavingsAccount" />
-        <item itemvalue="TestNG.OpenDebitCardTest.openDebitCard" />
-        <item itemvalue="Application.RegisterAccountTest" />
+        <item itemvalue="TestNG.RegisterAccountTest.registerAccount" />
       </list>
     </recent_temporary>
   </component>
