@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="698c585d-0cbc-4469-abcf-22dd3dadc992" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Pages/OpenCheckingAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Pages/OpenCheckingAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIBank/src/test/java/Pages/OpenSavingsAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/UIBank/src/test/java/Pages/OpenSavingsAccountPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +79,19 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "TestNG.LoanAccountCheckTest.executor": "Run",
+    "TestNG.LoanAccountCheckTest.testLoanAccountCheck.executor": "Run",
+    "TestNG.LoansTest.executor": "Run",
     "TestNG.LoginTest.executor": "Run",
     "TestNG.LoginTest.login.executor": "Run",
     "TestNG.OpenCheckingAccountTest.executor": "Run",
+    "TestNG.OpenDebitCardTest.executor": "Run",
     "TestNG.OpenDebitCardTest.openDebitCard.executor": "Run",
     "TestNG.OpenSavingsAccountTest.executor": "Run",
     "TestNG.OpenSavingsAccountTest.testOpenSavingsAccount.executor": "Run",
+    "TestNG.RegisterAccountTest.executor": "Run",
     "TestNG.RegisterAccountTest.registerAccount.executor": "Run",
+    "TestNG.TransferFundsTest.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "copilot.chat.legacySessionMetadata.migrated": "true",
     "git-widget-placeholder": "main",
@@ -102,10 +105,11 @@
     "onboarding.tips.debug.path": "C:/Working/untitled/OrangeHRM/src/main/java/com/sizwe/Main.java",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.OpenCheckingAccountTest">
+  <component name="RunManager" selected="TestNG.RegisterAccountTest">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="untitled" />
       <method v="2">
@@ -117,7 +121,7 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoanAccountCheckTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="UIBank" />
       <extension name="coverage">
         <pattern>
@@ -126,7 +130,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.LoginTest" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoanAccountCheckTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -134,7 +138,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OpenCheckingAccountTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoanAccountCheckTest.testLoanAccountCheck" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="UIBank" />
       <extension name="coverage">
         <pattern>
@@ -143,42 +147,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.OpenCheckingAccountTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OpenSavingsAccountTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="UIBank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.OpenSavingsAccountTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OpenSavingsAccountTest.testOpenSavingsAccount" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="UIBank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.OpenSavingsAccountTest" />
-      <option name="METHOD_NAME" value="testOpenSavingsAccount" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoanAccountCheckTest" />
+      <option name="METHOD_NAME" value="testLoanAccountCheck" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -186,7 +156,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterAccountTest.registerAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoansTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="UIBank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoansTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterAccountTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="UIBank" />
       <extension name="coverage">
         <pattern>
@@ -196,8 +183,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.RegisterAccountTest" />
-      <option name="METHOD_NAME" value="registerAccount" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransferFundsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="UIBank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TransferFundsTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -206,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.OpenCheckingAccountTest" />
-        <item itemvalue="TestNG.OpenSavingsAccountTest" />
-        <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.OpenSavingsAccountTest.testOpenSavingsAccount" />
-        <item itemvalue="TestNG.RegisterAccountTest.registerAccount" />
+        <item itemvalue="TestNG.RegisterAccountTest" />
+        <item itemvalue="TestNG.TransferFundsTest" />
+        <item itemvalue="TestNG.LoanAccountCheckTest.testLoanAccountCheck" />
+        <item itemvalue="TestNG.LoanAccountCheckTest" />
+        <item itemvalue="TestNG.LoansTest" />
       </list>
     </recent_temporary>
   </component>
