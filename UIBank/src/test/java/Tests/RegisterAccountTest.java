@@ -1,103 +1,91 @@
 package Tests;
 
-import org.openqa.selenium.By;
+import ExtentReports.TestListener;
+import Pages.RegisterAccountPage;
+import Utils.ExcelReader;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import java.lang.Thread;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
+@Listeners(TestListener.class)
 public class RegisterAccountTest {
 
     public static WebDriver driver;
 
-    @Test
-    public void registerAccount() throws InterruptedException {
+    @DataProvider(name = "registrationData")
+    public Object[][] registrationData() {
 
-        driver = new EdgeDriver();
+        int rows = ExcelReader.getRowCount();
 
-        driver.manage().window().maximize();
+        Object[][] data = new Object[rows][13];
 
-        driver.get("https://uibank.uipath.com/welcome");
+        for (int row = 1; row <= rows; row++) {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            for (int col = 0; col < 13; col++) {
 
-        // Click Register Button
+                data[row - 1][col] =
+                        ExcelReader.getCellData(row, col);
+            }
+        }
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/body/div/app-welcome-page/div[1]/div/div[2]/div/button"))).click();
+        return data;
+    }
 
-        Thread.sleep(2000);
+    @Test(dataProvider = "registrationData")
+    public void registerAccount(
+            String email,
+            String password,
+            String firstName,
+            String lastName,
+            String middleInitial,
+            String sex,
+            String title,
+            String employmentStatus,
+            String dateOfBirth,
+            String maritalStatus,
+            String dependents,
+            String username,
+            String agreeTerms) {
 
-        // Personal Information
+        try {
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys("siz.ngwenya@gmail.com");
+            driver = new EdgeDriver();
 
-        Thread.sleep(2000);
+            driver.manage().window().maximize();
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys("Test@123");
+            driver.get("https://uibank.uipath.com/welcome");
 
-        Thread.sleep(2000);
+            RegisterAccountPage registerPage =
+                    new RegisterAccountPage(driver);
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName"))).sendKeys("Sizwe");
+            registerPage.registerNewUser(
+                    email,
+                    password,
+                    firstName,
+                    lastName,
+                    middleInitial,
+                    sex,
+                    title,
+                    employmentStatus,
+                    maritalStatus,
+                    dateOfBirth,
+                    dependents,
+                    username
+            );
 
-        Thread.sleep(2000);
+            System.out.println(
+                    "Successfully Registered : "
+                            + username);
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("lastName"))).sendKeys("Ngwenya");
+        } finally {
 
-        Thread.sleep(2000);
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("middleName"))).sendKeys("M");
-
-        Thread.sleep(2000);
-
-        // Dropdowns
-
-        new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("sex")))).selectByVisibleText("Male");
-
-        Thread.sleep(2000);
-
-        new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("title")))).selectByVisibleText("Mr");
-
-        Thread.sleep(2000);
-
-        new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("employmentStatus")))).selectByVisibleText("Full-time");
-
-        Thread.sleep(2000);
-
-        new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("maritalStatus")))).selectByVisibleText("Single");
-
-        Thread.sleep(2000);
-
-        // Date of Birth (MM/DD/YY)
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("age"))).sendKeys("07/07/07");
-
-        Thread.sleep(2000);
-
-        // Other Fields
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("numberOfDependents"))).sendKeys("1");
-
-        Thread.sleep(2000);
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username"))).sendKeys("SizBankTest");
-
-        Thread.sleep(2000);
-
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("agreeCheckbox"))).click();
-
-        Thread.sleep(2000);
-
-        // Register
-
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/body/div/app-register-landing/app-register/div/div/div[2]/form/div[4]/button"))).click();
-
-        System.out.println("Registration Script Executed Successfully");
-
-        driver.quit();
+            if (driver != null) {
+                driver.quit();
+            }
+        }
     }
 }

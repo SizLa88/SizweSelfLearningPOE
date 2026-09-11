@@ -12,11 +12,19 @@ import java.util.Date;
 
 public class ScreenshotHelper {
 
-    public static void takeScreenshot(
+    public static String takeScreenshot(
             WebDriver driver,
             String screenshotName) {
 
+        String screenshotPath = "";
+
         try {
+
+            File screenshotDir = new File("Screenshots");
+
+            if (!screenshotDir.exists()) {
+                screenshotDir.mkdirs();
+            }
 
             File source =
                     ((TakesScreenshot) driver)
@@ -26,18 +34,26 @@ public class ScreenshotHelper {
                     new SimpleDateFormat("yyyyMMdd_HHmmss")
                             .format(new Date());
 
-            File destination =
-                    new File("Screenshots/"
+            screenshotPath =
+                    "Screenshots/"
                             + screenshotName
                             + "_"
                             + timestamp
-                            + ".png");
+                            + ".png";
+
+            File destination = new File(screenshotPath);
 
             FileUtils.copyFile(source, destination);
 
+            System.out.println("Screenshot saved: " + screenshotPath);
+
         } catch (IOException e) {
+
+            System.out.println("Failed to capture screenshot.");
 
             e.printStackTrace();
         }
+
+        return screenshotPath;
     }
 }

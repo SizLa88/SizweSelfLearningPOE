@@ -15,4 +15,6 @@ public class Config {
     public static final String CHECKING_ACCOUNT_NAME = "SizCheckAcc";
 
     public static final String CHECKING_ACCOUNT_NUMBER = "66422345";
+
+    public static final String LOAN_ACCOUNT_NUMBER = "6aa25ba45765320048f8303f";
 }

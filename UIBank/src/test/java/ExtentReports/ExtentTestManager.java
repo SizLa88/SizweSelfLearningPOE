@@ -14,4 +14,8 @@ public class ExtentTestManager {
     public static void setTest(ExtentTest test) {
         extentTest.set(test);
     }
+
+    public static void unload() {
+        extentTest.remove();
+    }
 }

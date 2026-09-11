@@ -7,39 +7,47 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverFactory {
 
-    private static WebDriver driver;
+    private static final ThreadLocal<WebDriver> driver =
+            new ThreadLocal<>();
 
     public static WebDriver initializeDriver(String browser) {
 
         if (browser.equalsIgnoreCase("chrome")) {
 
-            driver = new ChromeDriver();
+            driver.set(new ChromeDriver());
 
         } else if (browser.equalsIgnoreCase("edge")) {
 
-            driver = new EdgeDriver();
+            driver.set(new EdgeDriver());
+
+        } else if (browser.equalsIgnoreCase("firefox")) {
+
+            driver.set(new FirefoxDriver());
 
         } else {
 
-            driver = new FirefoxDriver();
+            throw new IllegalArgumentException(
+                    "Unsupported browser: " + browser
+            );
         }
 
-        driver.manage().window().maximize();
+        getDriver().manage().window().maximize();
 
-        return driver;
+        return getDriver();
     }
 
     public static WebDriver getDriver() {
 
-        return driver;
+        return driver.get();
     }
 
     public static void quitDriver() {
 
-        if (driver != null) {
+        if (getDriver() != null) {
 
-            driver.quit();
-            driver = null;
+            getDriver().quit();
+
+            driver.remove();
         }
     }
 }
