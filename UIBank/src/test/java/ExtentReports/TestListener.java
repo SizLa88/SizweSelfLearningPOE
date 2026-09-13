@@ -2,7 +2,7 @@ package ExtentReports;
 
 import Base.DriverFactory;
 import Utils.ScreenshotHelper;
-
+import ExtentReports.ChartGenerator;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -127,6 +127,12 @@ public class TestListener implements ITestListener {
                         ? 0
                         : ((double) passedTests
                            / totalTests) * 100;
+
+        ChartGenerator.generatePieChart(
+                passedTests,
+                failedTests,
+                skippedTests
+        );
 
         ExtentTest dashboard =
                 extent.createTest(

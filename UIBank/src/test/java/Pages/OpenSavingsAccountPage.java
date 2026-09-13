@@ -24,6 +24,7 @@ public class OpenSavingsAccountPage {
     private By viewAccountsButton = By.id("viewAccounts");
 
     // Methods
+
     public void clickSavingsAccount() {
         driver.findElement(savingsAccountTile).click();
     }
